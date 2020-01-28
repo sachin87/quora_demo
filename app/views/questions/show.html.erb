@@ -13,5 +13,11 @@
   <%= link_to @question.topic.name, follow_topic_path(@question.topic), class: 'follow_topic', method: :post %>
 </p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
+<%  @question.answers.each do |answer| %>
+  <div class='answer'>
+    <%= answer.answer %>
+  </div>
+<% end %>
+
+<%= link_to 'Add Answer', new_question_answer_path(@question) %>
 <%= link_to 'Back', questions_path %>

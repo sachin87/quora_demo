@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'topics/index'
-  get 'home/index'
-  resources :answers
-  resources :questions
+  resources :questions do
+    resources :answers
+  end
   devise_for :users
   resources :users do
     member do
