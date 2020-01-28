@@ -13,6 +13,7 @@
   <%= link_to @question.topic.name, follow_topic_path(@question.topic), class: 'follow_topic', method: :post %>
 </p>
 
+Answers
 <%  @question.answers.each do |answer| %>
   <div class='answer'>
     <%= answer.answer %>
