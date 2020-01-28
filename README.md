@@ -4,5 +4,5 @@
 
 * To seed topics run rake tasks
 
-rails db:seed
+```rails db:seed```
 
