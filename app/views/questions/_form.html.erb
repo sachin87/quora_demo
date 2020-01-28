@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :topic_id %>
+    <%= form.select :topic_id, Topic.all.map{|topic| [topic.name, topic.id]} %>
   </div>
 
   <div class="actions">

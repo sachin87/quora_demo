@@ -1,13 +1,16 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @question.title %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @question.user_id %>
+  <strong>Asked By:</strong>
+  <%= link_to @question.user.email, follow_user_path(@question.user), class: 'follow_user', method: :post %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= link_to @question.topic.name, follow_topic_path(@question.topic), class: 'follow_topic', method: :post %>
 </p>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |

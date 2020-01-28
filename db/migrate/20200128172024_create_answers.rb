@@ -9,5 +9,6 @@ class CreateAnswers < ActiveRecord::Migration[5.2]
     end
     add_index :answers, :user_id
     add_index :answers, :question_id
+    add_index :answers, [:question_id, :user_id]
   end
 end
